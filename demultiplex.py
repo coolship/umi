@@ -63,10 +63,10 @@ def read_core(read1,read2,index1,index2,sample_names,start_record,stride):
         ids = [get_sample_id(i1,i2,sample_names) for i1, i2 in i1s[start_record:end_record], i2s[start_record:end_record]]
 
         keys = set(ids)
-        r1_map = dict([(k:[]) for k in keys)
-        r2_map = dict([(k:[]) for k in keys)
-        i1_map = dict([(k:[]) for k in keys)
-        i2_map = dict([(k:[]) for k in keys)
+        r1_map = dict([(k,[]) for k in keys)
+        r2_map = dict([(k,[]) for k in keys)
+        i1_map = dict([(k,[]) for k in keys)
+        i2_map = dict([(k,[]) for k in keys)
 
         for i,e in ids:
             r1_map[ids[i]] = r1s[i]
